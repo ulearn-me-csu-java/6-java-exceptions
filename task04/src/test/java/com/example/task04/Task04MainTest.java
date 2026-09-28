@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class Task04MainTest {
 
     @Test
-    public void testGetSeason_withCorrectInput() {
+    public void testGetSeason_withCorrectInput() throws MyException {
         Assertions.assertEquals("зима", Task04Main.getSeason(1), "1 - январь -> зима");
         Assertions.assertEquals("зима", Task04Main.getSeason(2), "2 - февраль -> зима");
         Assertions.assertEquals("весна", Task04Main.getSeason(3), "3 - март -> весна");
