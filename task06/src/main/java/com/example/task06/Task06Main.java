@@ -6,11 +6,14 @@ public class Task06Main {
         // например вот так:
         /*
         new Task06Main().printMethodName();
+
          */
+        new Task06Main().printMethodName();
     }
 
     void printMethodName() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
+        System.out.print(stack[2].getMethodName() + "\n");
     }
 
 }
