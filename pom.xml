@@ -115,6 +115,7 @@
                     <configuration>
                         <!-- задания читают System.in / пишут в System.out, поэтому вывод тестов не должен смешиваться с выводом решения -->
                         <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                        <argLine>-Dnet.bytebuddy.experimental=true</argLine>
                     </configuration>
                 </plugin>
             </plugins>
