@@ -8,15 +8,15 @@ public class Task04Main {
         /*
         System.out.println(getSeason(-5));
          */
-        System.out.println(getSeason(-1));
-
     }
 
     static String getSeason(int monthNumber) {
-        if (monthNumber < 1 || monthNumber > 12) {
+
+        if (monthNumber > 13 || monthNumber < 1) {
             throw new MyException("monthNumber " + monthNumber + " is invalid, month number should be between 1..12");
         }
-        if (monthNumber == 12 || monthNumber == 1 || monthNumber == 2) {
+
+        if (monthNumber == 1 || monthNumber == 2 || monthNumber == 12) {
             return "зима";
         }
         if (monthNumber >= 3 && monthNumber <= 5) {
@@ -24,10 +24,9 @@ public class Task04Main {
         }
         if (monthNumber >= 6 && monthNumber <= 8) {
             return "лето";
-        } else {
-            return "осень";
         }
-
+        return "осень";
     }
+
 
 }

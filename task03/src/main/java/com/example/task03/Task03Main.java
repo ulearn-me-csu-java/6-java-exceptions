@@ -10,9 +10,10 @@ public class Task03Main {
         throwCheckedException();
          */
     }
+    public static void throwCheckedException() throws Exception {
 
-    //todo напишите здесь свою корректную реализацию задания
-    public static void throwCheckedException() throws IOException{
-        throw new IOException("Failed to read file!");
+        throw new Exception("tests");
+
     }
+
 }

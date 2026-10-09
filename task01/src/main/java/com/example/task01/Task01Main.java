@@ -7,19 +7,10 @@ public class Task01Main {
         /*
         codeWithNPE();
          */
-        try {
-            codeWithNPE();
-        } catch (NullPointerException e) {
-            System.out.println("Вызвана ошибка NullPointerException!");
-        }
     }
 
-
-
-
-        static void codeWithNPE() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-            String str = null;
-            str.length();
+    static void codeWithNPE() {
+        String res = null;
+        System.out.println(res.length());
     }
 }
