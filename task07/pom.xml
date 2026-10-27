@@ -14,5 +14,14 @@
     <artifactId>task07</artifactId>
 
     <name>Задание 07 Тип исключения</name>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>net.bytebuddy</groupId>
+                <artifactId>byte-buddy</artifactId>
+                <version>1.18.3</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
