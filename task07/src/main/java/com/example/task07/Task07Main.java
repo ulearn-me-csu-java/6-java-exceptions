@@ -6,19 +6,16 @@ public class Task07Main {
     public static final String UNCHECKED = "unchecked";
     public static final String NONE = "none";
 
-    public static void main(String[] args) {
-    }
-
-    public Processor processor;
+    Processor processor = new Processor();
 
     public String getExceptionType() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
         try {
-            processor.process(); //todo вы можете заменить реализацию этого метода для ручного дебага
+            processor.process();
+            return NONE;
+        } catch (RuntimeException | Error e) {
+            return UNCHECKED;
         } catch (Exception e) {
-
+            return CHECKED;
         }
-        return null;
     }
-
 }

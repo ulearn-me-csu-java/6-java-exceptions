@@ -7,4 +7,14 @@ public class Processor {
         return null;
     }
 
+    public String getExceptionType() {
+        try {
+            process();
+            return "none";
+        } catch (RuntimeException | Error e) {
+            return "unchecked";
+        } catch (Exception e) {
+            return "checked";
+        }
+    }
 }
