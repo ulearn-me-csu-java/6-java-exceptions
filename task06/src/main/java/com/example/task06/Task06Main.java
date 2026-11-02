@@ -10,7 +10,10 @@ public class Task06Main {
     }
 
     void printMethodName() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        Throwable throwable = new Throwable();
+        StackTraceElement[] stackTrace = throwable.getStackTrace();
+
+        System.out.print(stackTrace[1].getMethodName());
     }
 
 }
