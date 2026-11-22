@@ -1,17 +1,31 @@
 package com.example.task04;
 
-public class Task04Main {
+public class Task04Main
+{
 
-    public static void main(String[] args) {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        System.out.println(getSeason(-5));
-         */
+    public static void main(String[] args)
+    {
+        System.out.println(getSeason(7));
+
+        try
+        {
+            System.out.println(getSeason(-5));
+        }
+        catch (MyException e)
+        {
+            System.out.println(e.getMessage());
+        }
     }
 
-    static String getSeason(int monthNumber) {
-        return "";//todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+    static String getSeason(int monthNumber)
+    {
+        return switch (monthNumber)
+        {
+            case 12, 1, 2 -> "зима";
+            case 3, 4, 5 -> "весна";
+            case 6, 7, 8 -> "лето";
+            case 9, 10, 11 -> "осень";
+            default -> throw new MyException("monthNumber " + monthNumber + " is invalid, month number should be between 1..12");
+        };
     }
-
 }
